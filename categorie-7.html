@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>amicale MRCP le 25-10-2026 — TT8 TH 4x4</title>
+<style>/* Documents imprimables : aperçu à l'écran (feuille A4) et impression / PDF */
+
+* { box-sizing: border-box; }
+
+html, body { margin: 0; background: #e9ecf1; color: #111; font: 11pt/1.35 "Segoe UI", Arial, sans-serif; }
+
+/* Barre d'outils de l'aperçu (absente à l'impression) */
+.barre-apercu {
+  position: sticky; top: 0; z-index: 1;
+  display: flex; align-items: center; gap: 8px;
+  padding: 8px 16px; background: #1d2330; color: #e9edf5;
+}
+.barre-apercu .espace { flex: 1; }
+.barre-apercu button {
+  font: inherit; font-size: 10.5pt; padding: 5px 14px; border-radius: 4px;
+  border: 1px solid #50607a; background: #2b3447; color: #fff; cursor: pointer;
+}
+.barre-apercu button.principal { background: #1f5fbf; border-color: #1f5fbf; }
+#message-apercu { font-size: 10pt; color: #a8e6b5; }
+#message-apercu.erreur { color: #ff9b94; }
+#message-apercu button { margin-left: 8px; padding: 2px 10px; }
+
+/* Feuille A4 à l'écran */
+.feuille {
+  width: 210mm; min-height: 297mm; margin: 16px auto; padding: 12mm 12mm 16mm;
+  background: #fff; box-shadow: 0 2px 12px rgba(0, 0, 0, .25);
+}
+body.paysage .feuille { width: 297mm; min-height: 210mm; }
+
+/* Contenu des documents */
+.entete-rapport { display: flex; justify-content: space-between; align-items: flex-end; gap: 12mm; border-bottom: 2px solid #111; padding-bottom: 3mm; margin-bottom: 5mm; }
+.entete-rapport h1 { font-size: 17pt; margin: 0; }
+.entete-rapport .sous-titre { font-size: 10pt; color: #555; text-transform: uppercase; letter-spacing: .5px; }
+.entete-rapport .infos { text-align: right; font-size: 9.5pt; color: #333; }
+h2 { font-size: 12.5pt; margin: 6mm 0 2mm; }
+h2 small { font-weight: 400; color: #666; font-size: 9.5pt; }
+
+table { width: 100%; border-collapse: collapse; margin-bottom: 3mm; }
+th { background: #e8ebf0; font-size: 9pt; text-align: left; padding: 1.4mm 2mm; border-bottom: 1px solid #999; }
+td { padding: 1.2mm 2mm; border-bottom: 1px solid #ddd; font-variant-numeric: tabular-nums; }
+tbody tr:nth-child(even) td { background: #f6f7f9; }
+th.nombre, td.nombre { text-align: right; }
+th.centre, td.centre { text-align: center; }
+table.tours { font-size: 8.5pt; }
+table.tours th { font-size: 7.5pt; text-align: right; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 30mm; }
+table.tours td { padding: .6mm 1.5mm; }
+table.tours tr.synthese td { border-top: 1.5px solid #555; font-weight: 600; }
+.ecarte { color: #999; text-decoration: line-through; }
+.alerte { color: #b3261e; font-style: italic; }
+.note { font-size: 9pt; color: #444; }
+.corrections { font-size: 9.5pt; }
+.bloc-serie { break-inside: avoid; }
+.saut-page { break-before: page; height: 0; }
+@media screen { .saut-page { margin: 10mm -12mm; border-top: 2px dashed #b9c0cc; } }
+.pied-rapport { margin-top: 8mm; padding-top: 2mm; border-top: 1px solid #bbb; font-size: 8pt; color: #666; }
+
+@media print {
+  html, body { background: #fff; }
+  .barre-apercu { display: none; }
+  .feuille { width: auto; min-height: 0; margin: 0; padding: 0; box-shadow: none; }
+  thead { display: table-header-group; }
+  tr { break-inside: avoid; }
+}
+
+/* Encadré « Mon programme » (liste des séries) */
+.qr-programme { display: flex; align-items: center; gap: 14px; margin: 6px 0 12px; padding: 8px 12px; border: 1px solid #999; border-radius: 6px; font-size: 12px; break-inside: avoid; }
+.qr-programme svg { width: 32mm; height: 32mm; flex: none; }
+.qr-programme strong { font-size: 15px; }
+
+body { margin: 0; background: #eef1f5; font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+.barre-site { position: sticky; top: 0; z-index: 2; display: flex; flex-wrap: wrap; gap: 6px 14px; align-items: center; padding: 10px 16px; background: #0f7b2f; color: #fff; }
+.barre-site a { color: #fff; text-decoration: none; font-weight: 700; }
+.barre-site .chemin { opacity: .9; }
+.feuille { width: auto; min-height: 0; max-width: 1100px; margin: 12px auto; padding: 16px; background: #fff; box-shadow: 0 1px 4px rgba(0,0,0,.12); overflow-x: auto; box-sizing: border-box; }
+.entete-rapport { flex-wrap: wrap; gap: 6px 12px; }
+.feuille table { min-width: 560px; }
+.liste-site { list-style: none; padding: 0; margin: 0; display: grid; gap: 8px; }
+.liste-site a { display: block; padding: 12px 14px; border: 1px solid #d5d9e0; border-radius: 10px; color: #14181f; text-decoration: none; background: #fafbfc; }
+.liste-site a:hover { border-color: #0f7b2f; }
+.liste-site small { color: #5b6475; }
+.pied-site { max-width: 1100px; margin: 0 auto 20px; padding: 0 16px; color: #5b6475; font-size: 12px; }
+.saut-page { display: none; }
+@media (max-width: 600px) { .feuille { margin: 0; padding: 10px; box-shadow: none; } }
+</style>
+</head>
+<body>
+<nav class="barre-site"><span class="chemin"><a href="index.html">Résultats MRCP</a> › <a href="course-2.html">amicale MRCP le 25-10-2026</a> › <span>TT8 TH 4x4</span></span></nav>
+<main class="feuille"><header class="entete-rapport">
+  <div><h1>Rapport de clôture</h1><div class="sous-titre">Résultats de la course</div></div>
+  <div class="infos"><strong>amicale MRCP le 25-10-2026</strong> · 25/10/2026 · MRCP · Piste TT 1/8 (280 m)</div>
+</header>
+<section><table class="resultats"><thead><tr><th class="">Catégorie</th><th class="">Règlement</th><th class="centre">Pilotes</th><th class="">Podium</th></tr></thead><tbody><tr><td class=""><strong>TT8 TH 4x4 AMICALE 18E (TT8 TH 4x4)</strong></td><td class="">Amicale MRCP TH</td><td class="centre">6</td><td class="">1. Anthony GOMES<br>2. Philippe BEGARDS<br>3. Mathieu MONPLAISI</td></tr></tbody></table></section>
+<p class="note">Pour chaque catégorie : classement final, classements des qualifications et des finales, résultat de chaque manche de finale.</p>
+<footer class="pied-rapport">mon-chrono — édité le 25/10/2026 08:49</footer>
+<div class="saut-page"></div>
+<header class="entete-rapport">
+  <div><h1>TT8 TH 4x4 — Classement final</h1><div class="sous-titre">Classement final</div></div>
+  <div class="infos"><strong>amicale MRCP le 25-10-2026</strong> · 25/10/2026 · MRCP · Piste TT 1/8 (280 m)<br>Règlement : Amicale MRCP TH</div>
+</header>
+<section><table class="resultats"><thead><tr><th class="centre">Pos</th><th class="">Pilote</th><th class="">Détail</th></tr></thead><tbody><tr><td class="centre">1</td><td class=""><strong>Anthony GOMES</strong></td><td class="">7 t / 4:47.437</td></tr><tr><td class="centre">2</td><td class=""><strong>Philippe BEGARDS</strong></td><td class="">7 t / 4:56.892</td></tr><tr><td class="centre">3</td><td class=""><strong>Mathieu MONPLAISI</strong></td><td class="">7 t / 4:41.783</td></tr><tr><td class="centre">4</td><td class=""><strong>Herve MARTINAUX</strong></td><td class="">6 t / 4:17.607</td></tr><tr><td class="centre">5</td><td class=""><strong>Pierre MONPLAISI</strong></td><td class="">6 t / 5:11.431</td></tr><tr><td class="centre">6</td><td class=""><strong>Philippe DUCHEN</strong></td><td class="">5 t / 4:30.585</td></tr></tbody></table></section>
+<p class="note">Sans finale ni qualification courue : classement des essais.</p>
+
+<footer class="pied-rapport">mon-chrono — édité le 25/10/2026 08:49</footer></main>
+<p class="pied-site">Mis à jour le 25/10/2026 à 08:49 · chronométrage mon-chrono</p>
+</body>
+</html>
